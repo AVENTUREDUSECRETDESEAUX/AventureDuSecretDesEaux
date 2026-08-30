@@ -544,6 +544,64 @@ nav a:hover { opacity: 1; color: var(--eau); }
     color: var(--text-muted);
 }
 
+.member-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.member-photos .photo {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: rgba(92,139,132,0.05);
+}
+
+.member-photos .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(0.15) contrast(1.03);
+    transition: transform 0.4s ease;
+}
+
+.member-photos .photo:hover img {
+    transform: scale(1.03);
+}
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.contact-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--line);
+    color: var(--text-muted);
+    transition: border-color 0.3s, color 0.3s;
+}
+
+.contact-social a:hover {
+    border-color: var(--eau);
+    color: var(--eau);
+}
+
+.contact-social svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+}
+
 /* ---------- CONTACT / FOOTER ---------- */
 .contact-section {
     text-align: center;
@@ -871,11 +929,21 @@ footer {
             <p class="eyebrow">ITINÉRAIRE & FAUNE</p>
             <h3>Clara Aimar</h3>
             <p>Docteure en mécanique dans le milieu sportif, Clara aime le challenge sportif et l'aventure (Alaska, Yukon, Guatemala), et s'occupe de l'itinéraire ainsi que de la préparation physique et matérielle de la traversée. Son regard se portera en priorité sur la faune et la flore du Pantanal.</p>
+
+            <div class="member-photos">
+                <div class="photo"><img src="Images/Clara1.jpeg" alt="Clara Aimar"></div>
+                <div class="photo"><img src="Images/Clara2.jpeg" alt="Clara Aimar"></div>
+            </div>
         </div>
         <div class="member">
             <p class="eyebrow">POPULATIONS & PAYSAGE</p>
             <h3>Adrien Toledano</h3>
             <p>Réalisateur et photographe franco-espagnol, auteur d'un documentaire primé sur les enjeux environnementaux de l'extraction minière au Brésil. Son niveau en portugais lui permettra de photographier en priorité les populations locales et les pressions de l'agro-industrie sur le territoire.</p>
+
+            <div class="member-photos">
+                <div class="photo"><img src="Images/Adrien1.jpeg" alt="Adrien Toledano"></div>
+                <div class="photo"><img src="Images/Adrien2.jpeg" alt="Adrien Toledano"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -883,7 +951,18 @@ footer {
 <section id="contact" class="contact-section">
     <p class="eyebrow">CONTACT</p>
     <h2>Suivre la traversée</h2>
-    <a class="mail" href="mailto:clara.aimar@hotmail.fr">clara.aimar@hotmail.fr</a>
+
+    <div class="contact-social">
+        <a href="https://votresite.com" target="_blank" rel="noopener" aria-label="Instagram du projet">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://votresite.com" target="_blank" rel="noopener" aria-label="Facebook du projet">
+            <svg viewBox="0 0 24 24"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l0.5-4H15V8c0-0.6 0.4-1 1-1z"/></svg>
+        </a>
+        <a href="https://votresite.com" target="_blank" rel="noopener" aria-label="Email du projet">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+    </div>
 </section>
 
 <footer>
